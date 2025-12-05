@@ -9,13 +9,7 @@ export default function Footer() {
         {/* First Column - Logo */}
         <div className={styles.column}>
           <div className={styles.logoSection}>
-            <Image
-              src="/logo.png" // Update with your logo path
-              alt="Company Logo"
-              width={120}
-              height={40}
-              className={styles.logo}
-            />
+            Logo
             <p className={styles.logoText}>Your company description or tagline here.</p>
           </div>
         </div>

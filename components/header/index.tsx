@@ -12,13 +12,7 @@ export default function Header({ currentPage }: HeaderProps) {
         {/* Left side - Logo */}
         <div className={styles.leftSection}>
           <div className={styles.logo}>
-            <Image
-              src="/logo.png" // Update with your logo path
-              alt="Logo"
-              width={120}
-              height={40}
-              priority
-            />
+            Logo
           </div>
         </div>
 
