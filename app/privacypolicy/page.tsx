@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./points.module.css";
+import styles from "./privacypolicy.module.css";
 import Subheader from "../../components/subheader";
 import Header from "../../components/header";
 import Subfooter from "../../components/subfooter";
