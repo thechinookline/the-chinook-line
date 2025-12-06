@@ -9,10 +9,16 @@ jobs:
   create-pr:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  
+        
       - name: Create Pull Request
         uses: repo-sync/pull-request@v2
         with:
           destination_branch: "main"
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          pr_title: "Automated PR from ${{ github.ref }}"
-          pr_body: "Auto-generated pull request"
+          source_branch: "${{ github.ref_name }}"  
+          pr_title: "Changes from ${{ github.ref_name }}"
+          pr_body: "Auto-generated pull request from branch ${{ github.ref_name }}"
