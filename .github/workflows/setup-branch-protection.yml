@@ -1,0 +1,28 @@
+name: Setup Branch Protection
+
+on:
+  workflow_dispatch:  # Manual trigger only
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Instructions
+        run: |
+          echo "=== BRANCH PROTECTION SETUP ==="
+          echo ""
+          echo "1. Go to: https://github.com/${{ github.repository }}/settings/branches"
+          echo "2. Click 'Add branch protection rule'"
+          echo "3. Under 'Branch name pattern', enter: main"
+          echo "4. Enable these options:"
+          echo "   ✅ Require a pull request before merging"
+          echo "   ✅ Required approvals (set to 1)"
+          echo "   ✅ Dismiss stale pull request approvals when new commits are pushed"
+          echo "   ✅ Require conversation resolution before merging"
+          echo "   ✅ Require status checks to pass"
+          echo "     - Add 'build' (will appear after first CI run)"
+          echo "   ✅ Require branches to be up to date before merging"
+          echo "   ✅ Block force pushes"
+          echo "5. Click 'Create'"
+          echo ""
+          echo "Note: The 'build' status check will appear after your first PR."
