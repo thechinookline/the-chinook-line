@@ -13,7 +13,7 @@ export default function Map() {
             <main className={styles.main}>
                 <div style={{ width: '100%', height: '80vh' }}>
                 <iframe 
-                    src="https://skytrain-v1.netlify.app/" 
+                    src="https://the-chinook-line-map-v2.vercel.app/" 
                     width="100%" 
                     height="100%"
                     style={{ border: 'none' }}
