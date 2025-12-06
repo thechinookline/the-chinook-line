@@ -22,7 +22,7 @@ export default function Home() {
         <div className={styles.intro}>
           <h1>Testing</h1>
           <p>
-           TRY instructions? Head over to{" "}
+           TESTING
             <a
               href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
               target="_blank"
