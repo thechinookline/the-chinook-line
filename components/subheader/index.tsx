@@ -34,10 +34,10 @@ export default function Subheader() {
             <a href="https://www.instagram.com/thechinookline/" target="_blank" rel="noopener noreferrer">
               <span className={styles.icon}>📷</span>
             </a>
-            <a href="https://www.instagram.com/thechinookline/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/company/the-chinook-line/about/?viewAsMember=true" target="_blank" rel="noopener noreferrer">
               <span className={styles.icon}>📋</span>
             </a>
-            <a href="https://www.linkedin.com/company/the-chinook-line/about/?viewAsMember=true" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.youtube.com/@TheChinookLine" target="_blank" rel="noopener noreferrer">
               <span className={styles.icon}>💼</span>
             </a>
           </div>
