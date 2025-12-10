@@ -20,7 +20,7 @@ export default function Home() {
           priority
         />
         <div className={styles.intro}>
-          <h1>Testing</h1>
+          <h1>Home</h1>
           <p>
            TESTING CHANGESSS
             <a
