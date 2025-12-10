@@ -52,6 +52,12 @@ export default function Header({ currentPage }: HeaderProps) {
           </nav>
         </div>
       </div>
+      <div className={styles.bottomLeftText}>
+        <div>
+          <div className={styles.welcome}>Welcome to The Chinook Line</div>
+          <div className={styles.slogan}>Connecting every community.</div>
+        </div>
+      </div>
     </div>
   );
 }
