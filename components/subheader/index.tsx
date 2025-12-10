@@ -6,39 +6,38 @@ export default function Subheader() {
       <div className={styles.subheaderContent}>
         {/* Left side - Email */}
         <div className={styles.leftSection}>
-          <a href="mailto:contact@example.com" className={styles.email}>
-            contact@example.com
+          <a href="mailto:comingsoon@thechinookline.ca" className={styles.email}>
+            comingsoon@thechinookline.ca
           </a>
+          <span> | </span> 
+          <a>1.111.111.1111</a>
         </div>
 
         {/* Language selector */}
           <div className={styles.languageSelector}>
             <select className={styles.languageDropdown}>
               <option value="en">English</option>
-              <option value="es">Español</option>
               <option value="fr">Français</option>
-              <option value="de">Deutsch</option>
             </select>
           </div>
-
+        
         {/* Right side - Social media icons and language selector */}
         <div className={styles.rightSection}>
           {/* Social media icons */}
           <div className={styles.socialIcons}>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-              {/* Replace with your Twitter icon */}
+            <a href="https://x.com/thechinookline" target="_blank" rel="noopener noreferrer">
               <span className={styles.icon}>🐦</span>
             </a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-              {/* Replace with your Facebook icon */}
+            <a href="https://www.facebook.com/profile.php?id=61584525463582" target="_blank" rel="noopener noreferrer">
               <span className={styles.icon}>📘</span>
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-              {/* Replace with your Instagram icon */}
+            <a href="https://www.instagram.com/thechinookline/" target="_blank" rel="noopener noreferrer">
               <span className={styles.icon}>📷</span>
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-              {/* Replace with your LinkedIn icon */}
+            <a href="https://www.instagram.com/thechinookline/" target="_blank" rel="noopener noreferrer">
+              <span className={styles.icon}>📋</span>
+            </a>
+            <a href="https://www.linkedin.com/company/the-chinook-line/about/?viewAsMember=true" target="_blank" rel="noopener noreferrer">
               <span className={styles.icon}>💼</span>
             </a>
           </div>
