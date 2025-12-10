@@ -49,7 +49,7 @@
 
 /* Active page styling only */
 .navLink.active {
-  color: #0070f3;
+  color: #FFD23D;
   font-weight: 600;
 }
 
@@ -60,12 +60,12 @@
   left: 0;
   width: 100%;
   height: 2px;
-  background: #0070f3;
+  background: #FFD23D;
 }
 
 /* Make login stand out */
 .navigation .navLink:last-child {
-  background: #0070f3;
+  background: #FFD23D;
   color: white;
   padding: 0.5rem 1.5rem;
   border-radius: 6px;
@@ -73,11 +73,11 @@
 }
 
 .navigation .navLink:last-child:hover {
-  background: #0051a8;
+  background: #FFD23D;
 }
 
 .navigation .navLink:last-child.active {
-  background: #0051a8;
+  background: #FFD23D;
 }
 
 .navigation .navLink:last-child::after {

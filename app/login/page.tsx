@@ -9,7 +9,7 @@ export default function Login() {
     return (
          <div className={styles.page}>
       <Subheader/>
-      <Header currentPage="points"/>
+      <Header currentPage="login"/>
       <main className={styles.main}>
         <Image
           className={styles.logo}
@@ -55,7 +55,7 @@ export default function Login() {
               width={16}
               height={16}
             />
-            Deploy Now
+            Login
           </a>
           <a
             className={styles.secondary}

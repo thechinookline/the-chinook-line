@@ -11,6 +11,7 @@ export default function Map() {
             <Subheader/>
             <Header currentPage="map"/>
             <main className={styles.main}>
+                <div>Map</div>
                 <div style={{ width: '100%', height: '80vh' }}>
                 <iframe 
                     src="https://the-chinook-line-map-v2.vercel.app/" 
