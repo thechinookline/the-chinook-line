@@ -1,12 +1,20 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary-color: #454545;
+  --secondary-color: #ffffff;
+  --tertiary-color: #011A42;
+  --quaternary-color: #FFD23D;
+
+  --font-size-header1: 32px;
+  --font-size-body: 24px;
+  --font-size-small: 20px;
+  --font-size-xsmall: 16px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --primary-color: #fff;
+    --secondary-color: #454545;
+;
   }
 }
 
