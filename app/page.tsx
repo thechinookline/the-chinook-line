@@ -5,6 +5,7 @@ import Header from "../components/header";
 import Subfooter from "../components/subfooter";
 import Footer from "../components/footer";
 import GettingStarted from "../components/gettingstarted";
+import MessageBanner from "../components/message";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <GettingStarted/>
       </main>
       <Footer/>
+      <MessageBanner/>
       <Subfooter/>
     </div>
   );

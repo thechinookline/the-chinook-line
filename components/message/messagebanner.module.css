@@ -1,0 +1,33 @@
+.banner {
+  background-color: var(--quaternary-color); 
+  color: var(--primary-color); 
+  width: 100%;
+  padding: 1rem 1.5rem;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-align: center;
+  margin: 0;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    padding: 0.75rem 1rem;
+  }
+  
+  .text {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+}
