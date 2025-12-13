@@ -1,0 +1,11 @@
+/* page.module.css - for sitemap, privacypolicy, and terms pages */
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+  padding: 2rem 1rem;
+}
