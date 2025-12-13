@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './subfooter.module.css';
 
 export default function Subfooter() {
@@ -11,11 +12,19 @@ export default function Subfooter() {
         
         {/* Second line - Links */}
         <div className={styles.links}>
-          <a href="/sitemap" className={styles.link}>Sitemap</a>
+          <Link href="/sitemap" className={styles.link}>
+            Sitemap
+          </Link>
           <span className={styles.separator}>|</span>
-          <a href="/privacy-policy" className={styles.link}>Privacy Policy</a>
+          
+          <Link href="/privacypolicy" className={styles.link}>
+            Privacy Policy
+          </Link>
           <span className={styles.separator}>|</span>
-          <a href="/terms" className={styles.link}>Terms and Conditions</a>
+          
+          <Link href="/termsandconditions" className={styles.link}>
+            Terms and Conditions
+          </Link>
         </div>
       </div>
     </div>
