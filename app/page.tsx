@@ -6,6 +6,7 @@ import Subfooter from "../components/subfooter";
 import Footer from "../components/footer";
 import GettingStarted from "../components/gettingstarted";
 import MessageBanner from "../components/message";
+import EmailUpdates from "../components/emailupdates";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Header currentPage="home"/>
       <main className={styles.main}>
         <GettingStarted/>
+        <EmailUpdates/>
       </main>
       <Footer/>
       <MessageBanner/>
