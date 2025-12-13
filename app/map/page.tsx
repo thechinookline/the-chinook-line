@@ -4,6 +4,7 @@ import Subheader from "../../components/subheader";
 import Header from "../../components/header";
 import Subfooter from "../../components/subfooter";
 import Footer from "../../components/footer";
+import MessageBanner from "../../components/message";
 
 export default function Map() {
     return (
@@ -23,6 +24,7 @@ export default function Map() {
                 </div>
             </main>
             <Footer/>
+            <MessageBanner/>
             <Subfooter/>
         </div>
     );

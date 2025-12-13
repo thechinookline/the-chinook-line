@@ -4,6 +4,7 @@ import Subheader from "../../components/subheader";
 import Header from "../../components/header";
 import Footer from "../../components/footer";
 import Subfooter from "../../components/subfooter";
+import MessageBanner from "../../components/message";
 
 export default function PrivacyPolicy() {
   return (
@@ -166,6 +167,7 @@ export default function PrivacyPolicy() {
         </div>
       </main>
       <Footer/>
+      <MessageBanner/>
       <Subfooter/>
     </div>
   );

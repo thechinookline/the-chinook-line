@@ -3,6 +3,7 @@ import Footer from "../../components/footer";
 import Subfooter from "../../components/subfooter";
 import Subheader from "../../components/subheader";
 import styles from "./termsandconditions.module.css";
+import MessageBanner from "../../components/message";
 
 export default function TermsAndConditions() {
   return (
@@ -15,6 +16,7 @@ export default function TermsAndConditions() {
       </main>
       
       <Footer />
+      <MessageBanner/>
       <Subfooter />
     </div>
   );
