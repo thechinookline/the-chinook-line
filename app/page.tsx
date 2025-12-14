@@ -7,19 +7,21 @@ import Footer from "../components/footer";
 import GettingStarted from "../components/gettingstarted";
 import MessageBanner from "../components/message";
 import EmailUpdates from "../components/emailupdates";
+import TripPlanner from "../components/tripPlanner";
+import TopStations from "../components/topStations";
 
 export default function Home() {
   return (
     <div className={styles.page}>
-      <Subheader/>
-      <Header currentPage="home"/>
+      <TripPlanner />
+      <TopStations />
       <main className={styles.main}>
-        <GettingStarted/>
-        <EmailUpdates/>
+        <GettingStarted />
+        <EmailUpdates />
       </main>
-      <Footer/>
-      <MessageBanner/>
-      <Subfooter/>
+      <Footer />
+      <MessageBanner />
+      <Subfooter />
     </div>
   );
 }
