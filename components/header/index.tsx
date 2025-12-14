@@ -3,66 +3,50 @@
 import styles from "./header.module.css";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Header() {
   const pathname = usePathname();
+  const [open, setOpen] = useState(false);
 
   const isActive = (path: string) => pathname === path;
 
   return (
     <header className={styles.header}>
       <div className={styles.headerContent}>
-        {/* Left side - Logo */}
         <div className={styles.leftSection}>
           <div className={styles.logo}>Logo</div>
         </div>
 
+        {/* Hamburger (mobile only) */}
+        <button
+          className={styles.menuButton}
+          onClick={() => setOpen(!open)}
+          aria-label="Toggle menu"
+        >
+          ☰
+        </button>
+
         {/* Navigation */}
-        <nav className={styles.navigation}>
-          <Link
-            href="/"
-            className={`${styles.navLink} ${
-              isActive("/") ? styles.active : ""
-            }`}
-          >
-            Home
-          </Link>
-
-          <Link
-            href="/points"
-            className={`${styles.navLink} ${
-              isActive("/points") ? styles.active : ""
-            }`}
-          >
-            Points
-          </Link>
-
-          <Link
-            href="/map"
-            className={`${styles.navLink} ${
-              isActive("/map") ? styles.active : ""
-            }`}
-          >
-            Map
-          </Link>
-
-          <Link
-            href="/book"
-            className={`${styles.navLink} ${
-              isActive("/book") ? styles.active : ""
-            }`}
-          >
-            Book
-          </Link>
-
-          <Link
-            href="/login"
-            className={`${styles.navLink} ${
-              isActive("/login") ? styles.active : ""
-            }`}
-          >
-            Login
-          </Link>
+        <nav className={`${styles.navigation} ${open ? styles.open : ""}`}>
+          {[
+            ["/", "Home"],
+            ["/points", "Points"],
+            ["/map", "Map"],
+            ["/book", "Book"],
+            ["/login", "Login"],
+          ].map(([href, label]) => (
+            <Link
+              key={href}
+              href={href}
+              className={`${styles.navLink} ${
+                isActive(href) ? styles.active : ""
+              }`}
+              onClick={() => setOpen(false)}
+            >
+              {label}
+            </Link>
+          ))}
         </nav>
       </div>
     </header>
