@@ -63,23 +63,6 @@ export default function NewsSection() {
             </article>
           </div>
         </div>
-
-        <div className={styles.contactRow}>
-          <div>
-            <span className={styles.contactLabel}>Phone</span>
-            <span className={styles.contactValue}>{newsData.contact.phone}</span>
-          </div>
-
-          <div>
-            <span className={styles.contactLabel}>Operating Hours</span>
-            <span className={styles.contactValue}>{newsData.contact.hours}</span>
-          </div>
-
-          <div>
-            <span className={styles.contactLabel}>Email</span>
-            <span className={styles.contactValue}>{newsData.contact.email}</span>
-          </div>
-        </div>
       </div>
     </section>
   );
