@@ -10,12 +10,12 @@
 }
 
 .card{
-    background-color: white;
+    background-color: var(--secondary-color);
     border-radius: 1px;
     padding: 32px 16px;
     text-align: center;
     text-decoration: none;
-    color: #000000;
+    color: var(--primary-color);
 
     display: flex;
     flex-direction: column;
@@ -36,7 +36,7 @@
     width: 78px;
     height: 78px;
     border-radius: 50%;
-    border: 0.5px solid #000000;
+    border: 0.5px solid var(--tertiary-color);
     justify-self: center;
 }
 
