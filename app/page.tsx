@@ -7,6 +7,7 @@ import Footer from "../components/footer";
 import GettingStarted from "../components/gettingstarted";
 import MessageBanner from "../components/message";
 import EmailUpdates from "../components/emailupdates";
+import ProfilePageForUserAccount from "../components/ProfilePageForUserAccount";
 
 export default function Home() {
   return (
@@ -14,12 +15,14 @@ export default function Home() {
       <Subheader/>
       <Header currentPage="home"/>
       <main className={styles.main}>
+              <ProfilePageForUserAccount />
         <GettingStarted/>
         <EmailUpdates/>
       </main>
       <Footer/>
       <MessageBanner/>
       <Subfooter/>
+
     </div>
   );
 }
