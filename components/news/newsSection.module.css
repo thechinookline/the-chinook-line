@@ -1,0 +1,152 @@
+.section {
+  padding: 40px 0 64px;
+  background: #fff;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.heading {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: #2b2b2b;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.35fr 0.9fr;
+  gap: 32px;
+}
+
+.featuredCard {
+  display: grid;
+  gap: 12px;
+}
+
+.featuredMedia {
+  height: 230px;
+  background: #dedede;
+  border-radius: 6px;
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #2b2b2b;
+}
+
+.date {
+  font-size: 12px;
+  color: #7a7a7a;
+}
+
+.excerpt {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #5b5b5b;
+  margin: 0;
+}
+
+.rightCol {
+  display: grid;
+  gap: 20px;
+}
+
+.sideCard {
+  display: grid;
+  gap: 12px;
+}
+
+.sideMediaWide {
+  height: 120px;
+  background: #dedede;
+  border-radius: 6px;
+}
+
+.sideCardCompact {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 12px;
+  align-items: center;
+}
+
+.sideMediaSmall {
+  height: 70px;
+  background: #dedede;
+  border-radius: 6px;
+}
+
+.sideBody {
+  display: grid;
+  grid-template-columns: 3px 1fr;
+  gap: 12px;
+}
+
+.accent {
+  background: #f2c200;
+  border-radius: 2px;
+}
+
+.contactRow {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid #e5e5e5;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  text-align: center;
+}
+
+.contactLabel {
+  display: block;
+  font-size: 12px;
+  color: #6f6f6f;
+  margin-bottom: 6px;
+}
+
+.contactValue {
+  font-size: 13px;
+  font-weight: 500;
+  color: #2b2b2b;
+}
+
+.featuredMedia,
+.sideMediaWide,
+.sideMediaSmall {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sideCardCompact {
+    grid-template-columns: 1fr;
+  }
+
+  .sideMediaSmall {
+    height: 110px;
+  }
+}
+
+@media (max-width: 420px) {
+  .contactRow {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    text-align: center;
+  }
+}

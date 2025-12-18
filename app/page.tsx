@@ -7,6 +7,7 @@ import Footer from "../components/footer";
 import GettingStarted from "../components/gettingstarted";
 import MessageBanner from "../components/message";
 import EmailUpdates from "../components/emailupdates";
+import NewsSection from "../components/news/newsSection";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <GettingStarted/>
         <EmailUpdates/>
       </main>
+      <NewsSection/>
       <Footer/>
       <MessageBanner/>
       <Subfooter/>
