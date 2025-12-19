@@ -3,7 +3,7 @@
 import { useState, useMemo, useEffect } from "react";
 import styles from "./topStations.module.css";
 import StationCard from "./StationCard";
-import { STATIONS, Zone, ZONES } from "../../lib/stations/stationList";
+import { STATIONS, Zone, ZONES } from "../../data/stations/stationList";
 
 const PAGE_SIZE = 3;
 

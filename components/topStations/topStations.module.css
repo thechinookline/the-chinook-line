@@ -1,6 +1,6 @@
 /* Section */
 .section {
-  background: #fff;
+  background: var(--secondary-color);
   padding: 3rem 0;
   width: 100%;
 }
@@ -34,14 +34,14 @@
   cursor: pointer;
   padding: 0.5rem 0;
   min-height: 44px;
-  color: #666;
+  color: var(--quinary-color);
   border-bottom: 2px solid transparent;
   
 }
 
 .filterBtn.active {
-  color: #000;
-  border-color: #ffd23d;
+  color: var(--primary-color);
+  border-color: var(--quaternary-color);
   font-weight: 600;
 }
 
@@ -66,7 +66,7 @@
 
 /* Card */
 .card {
-  background: #fff;
+  background: var(--secondary-color);
   border-radius: 12px;
   cursor: pointer;
   padding-bottom: 1rem;
@@ -80,14 +80,11 @@
     transform: translateY(-4px) scale(1.02);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
   }
-  .filterBtn{
-    font-size:xx-small;
-  }
 }
 
 /* Keyboard accessibility */
 .card:focus-visible {
-  outline: 3px solid #ffd23d;
+  outline: 3px solid var(--quaternary-color);
   outline-offset: 4px;
 }
 
@@ -114,7 +111,7 @@
 
 .cardTag {
   font-size: 0.85rem;
-  color: #777;
+  color: var(--quinary-color);
   padding: 0 0.5rem;
 }
 
@@ -124,7 +121,7 @@
   margin: 3rem auto 0;
   width: 100%;
   max-width: 280px;
-  background: #ffd23d;
+  background: var(--quaternary-color);
   border: none;
   border-radius: 999px;
   padding: 0.75rem 2rem;
