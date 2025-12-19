@@ -8,6 +8,7 @@ import GettingStarted from "../components/gettingstarted";
 import MessageBanner from "../components/message";
 import EmailUpdates from "../components/emailupdates";
 import ProfilePageForUserAccount from "../components/ProfilePageForUserAccount";
+import SixBoxes from "../components/sixboxes"
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <main className={styles.main}>
               <ProfilePageForUserAccount />
         <GettingStarted/>
+        <SixBoxes />
         <EmailUpdates/>
       </main>
       <Footer/>
