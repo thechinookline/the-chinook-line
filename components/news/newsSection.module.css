@@ -1,7 +1,8 @@
 .section {
-  padding: 40px 0 64px;
+ padding: 40px 0 64px;
  background: var(--secondary-color);
 }
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -93,8 +94,17 @@
 }
 
 .accent {
+  width: 3px;
+  flex: 0 0 3px;
   background: var(--quaternary-color);
   border-radius: 2px;
+  align-self: stretch;
+}
+
+.featuredBody {
+  display: flex;
+  gap: 12px;
+  align-items: stretch;
 }
 
 .featuredMedia,

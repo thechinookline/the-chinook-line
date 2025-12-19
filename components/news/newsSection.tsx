@@ -19,15 +19,20 @@ export default function NewsSection() {
 
         <div className={styles.grid}>
           <article className={styles.featuredCard}>
-            <div
-              className={styles.featuredMedia}
-              style={{ backgroundImage: `url(${featured.image})` }}
-            />
-            <div className={styles.meta}>
-              <span className={styles.title}>{featured.title}</span>
-              <span className={styles.date}>{featured.date}</span>
+              <div
+                className={styles.featuredMedia}
+                style={{ backgroundImage: `url(${featured.image})` }}
+              />
+            <div className={styles.featuredBody}>
+              <div className={styles.accent} />
+              <div>
+                <div className={styles.meta}>
+                  <span className={styles.title}>{featured.title}</span>
+                  <span className={styles.date}>{featured.date}</span>
+                </div>
+                <p className={styles.excerpt}>{featured.excerpt}</p>
+              </div>
             </div>
-            <p className={styles.excerpt}>{featured.excerpt}</p>
           </article>
 
           <div className={styles.rightCol}>
