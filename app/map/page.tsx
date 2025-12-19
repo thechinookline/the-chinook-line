@@ -2,6 +2,7 @@ import styles from "./map.module.css";
 import Subfooter from "../../components/subfooter";
 import Footer from "../../components/footer";
 import MessageBanner from "../../components/message";
+import OperationHours from "../../components/operationhours";
 
 export default function Map() {
   return (
@@ -17,6 +18,7 @@ export default function Map() {
             title="Interactive Map"
           />
         </div>
+        <OperationHours />
       </main>
       <Footer />
       <MessageBanner />
