@@ -9,6 +9,7 @@ import MessageBanner from "../components/message";
 import EmailUpdates from "../components/emailupdates";
 import NewsSection from "../components/news/newsSection";
 import SixBoxes from "../components/sixboxes"
+import OperationHours from "../components/operationhours";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <GettingStarted/>
         <SixBoxes />
         <EmailUpdates/>
+        <OperationHours/>
       </main>
       <NewsSection/>
       <Footer/>

@@ -1,0 +1,45 @@
+/* components/OperationHours.module.css */
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  width: 100%;
+  padding: 2rem 0;
+}
+
+@media (min-width: 768px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+/* Removed the desktop media query that changed alignment to left */
+
+.title {
+  font-size: var(--font-size-body);
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+.content {
+  color: var(--primary-color);
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+  font-size: var(--font-size-body);
+}
+
+.content:hover {
+  color: var(--quaternary-color);
+}
