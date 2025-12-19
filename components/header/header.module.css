@@ -47,7 +47,7 @@
 }
 
 .navLink {
-  color: #333;
+  color:  var(--primary-color);
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
@@ -60,7 +60,7 @@
 
 /* Active page styling only */
 .navLink.active {
-  color: #FFD23D;
+  color: var(--quaternary-color);
   font-weight: 700;
 }
 
@@ -71,24 +71,24 @@
   left: 0;
   width: 100%;
   height: 2px;
-  background: #FFD23D;
+  background: var(--quaternary-color);
 }
 
 /* Make login stand out */
 .navigation .navLink:last-child {
-  background: #FFD23D;
-  color: white;
+  background: var(--quaternary-color);
+  color: var(--secondary-color);
   padding: 0.5rem 1.5rem;
   border-radius: 6px;
   margin-left: 1rem;
 }
 
 .navigation .navLink:last-child:hover {
-  background: #FFD23D;
+  background: var(--quaternary-color);
 }
 
 .navigation .navLink:last-child.active {
-  background: #FFD23D;
+  background: var(--quaternary-color);
 }
 
 .navigation .navLink:last-child::after {
@@ -119,7 +119,7 @@
     top: 100%;
     left: 0;
     width: 100%;
-    background: white;
+    background: var(--secondary-color);
     display: none;
     flex-direction: column;
     gap: 0;
