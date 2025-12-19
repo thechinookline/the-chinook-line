@@ -1,0 +1,271 @@
+/* ============================= */
+/* HERO CONTAINER */
+/* ============================= */
+
+.planner {
+  position: relative;
+  min-height: 90vh;
+  width: 100%;
+  background-image: url("/hero-bg.jpg");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* Overlay for readability */
+.planner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.25),
+    rgba(0, 0, 0, 0.35)
+  );
+  z-index: 1;
+}
+
+/* ============================= */
+/* HERO TEXT */
+/* ============================= */
+
+.bottomLeftText {
+  position: absolute;
+  bottom: 80px;
+  left: 60px;
+  color: var(--secondary-color);
+  z-index: 2;
+  max-width: 480px;
+}
+
+.welcome {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.slogan {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* ============================= */
+/* TRIP PLANNER CARD */
+/* ============================= */
+
+.tripPlanner {
+  position: absolute;
+  top: 160px;
+  right: 6%;
+  width: min(420px, 90%);
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  border-radius: 14px;
+  padding: 24px;
+  z-index: 2;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
+}
+
+/* ============================= */
+/* TABS */
+/* ============================= */
+
+.tabHeader {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: -24px -24px 20px;
+  border-bottom: 1px solid var(--quinary-color);
+}
+
+.tab {
+  padding: 14px 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  background: var(--secondary-color);
+  border: none;
+  cursor: pointer;
+  color: var(--quinary-color);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.tab:hover {
+  background: var(--secondary-color);
+}
+
+.activeTab {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+/* ============================= */
+/* FORM SECTIONS */
+/* ============================= */
+
+.section {
+  margin-bottom: 18px;
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--quinary-color);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.optionGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* ============================= */
+/* OPTION BUTTONS */
+/* ============================= */
+
+.option {
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--quinary-color);
+  background: var(--secondary-color);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 44px;
+}
+
+.option:hover {
+  border-color: var(--quaternary-color);
+}
+
+.option.active {
+  background: var(--quaternary-color);
+  border-color: var(--quaternary-color);
+  font-weight: 600;
+}
+
+/* ============================= */
+/* INPUTS */
+/* ============================= */
+
+.input,
+.select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--quinary-color);
+  font-size: 1rem;
+}
+
+/* ============================= */
+/* TOTAL */
+/* ============================= */
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* ============================= */
+/* CTA */
+/* ============================= */
+
+.planBtn {
+  width: 100%;
+  padding: 14px;
+  background: var(--quaternary-color);
+  border: none;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.planBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================= */
+/* MOBILE FIX (IMPORTANT PART) */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .planner {
+    min-height: auto;
+    padding-bottom: 2rem;
+  }
+
+  .planner::before {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.18),
+      rgba(0, 0, 0, 0.28)
+    );
+  }
+
+  /* HERO TEXT STACKS */
+ /* HERO TEXT — MOBILE OPTIMIZED */
+  .bottomLeftText {
+    position: relative;
+    margin-top: 40%;
+    padding: 0 1.25rem;
+    max-width: 360px;
+    text-align: center;
+  }
+
+  .welcome {
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+
+  .slogan {
+    font-size: 0.95rem;
+    opacity: 0.85;
+  }
+
+
+  /* CARD BECOMES FLOW CONTENT */
+  .tripPlanner {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin: 0 auto;
+    width: calc(100% - 2rem);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+  }
+
+  /* TABS BIGGER */
+  .tab {
+    padding: 16px 0;
+  }
+
+  .tabHeader {
+    margin: -20px -20px 18px;
+  }
+
+  /* OPTIONS FULL WIDTH */
+  .option {
+    flex: 1 1 auto;
+    text-align: center;
+    padding: 8px 8px;
+    font-size: 0.95rem;
+  }
+
+  .optionGroup {
+    gap: 12px;
+  }
+
+  .planBtn {
+    padding: 16px;
+    font-size: 1.05rem;
+  }
+}

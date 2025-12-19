@@ -83,6 +83,11 @@ a.secondary {
   border-color: var(--button-secondary-border);
 }
 
+.topStack {
+  position: relative; /* 🔑 anchor for absolute header */
+  width: 100%;
+}
+
 
 @media (hover: hover) and (pointer: fine) {
   a.primary:hover {
