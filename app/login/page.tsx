@@ -67,6 +67,7 @@ export default function Login() {
             Documentation
           </a>
         </div>
+        <a href="/profile">to ProfilePage</a>
       </main>
       <Footer/>
       <MessageBanner/>

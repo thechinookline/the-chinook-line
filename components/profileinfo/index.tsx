@@ -1,7 +1,7 @@
-import styles from './ProfilePageForUserAccount.module.css'
+import styles from './ProfileInfo.module.css'
 import Image from "next/image"
 
-export default function ProfilePageForUserAccount(){
+export default function ProfileInfo(){
     return(
         <section className={styles.profileSection}>
             <Image 
