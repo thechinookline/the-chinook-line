@@ -8,4 +8,15 @@
 .main {
   flex: 1;
   padding: 2rem 1rem;
+  padding: 100px 130px;
+}
+
+.title{
+  font-size: var(--font-size-body);
+  padding-bottom: 20px;
+}
+
+.termsandcondition p{
+  font-size: var(--font-size-body);
+  padding-bottom: 15px;
 }
