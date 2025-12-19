@@ -5,6 +5,7 @@ import Header from "../../components/header";
 import Subfooter from "../../components/subfooter";
 import Footer from "../../components/footer";
 import MessageBanner from "../../components/message";
+import OperationHours from "../../components/operationhours";
 
 export default function Book() {
     return (
@@ -13,6 +14,7 @@ export default function Book() {
       <Header currentPage="book"/>
       <main className={styles.main}>
         Book Page
+        <OperationHours/>
       </main>
       <Footer/>
       <MessageBanner/>
