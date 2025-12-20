@@ -2,7 +2,7 @@ import styles from './header.module.css';
 import Image from 'next/image';
 
 interface HeaderProps {
-  currentPage: 'home' | 'points' | 'map' | 'book' | 'login';
+  currentPage: 'home' | 'fares' | 'points' | 'map' | 'book' | 'login';
 }
 
 export default function Header({ currentPage }: HeaderProps) {
@@ -24,6 +24,12 @@ export default function Header({ currentPage }: HeaderProps) {
               className={`${styles.navLink} ${currentPage === 'home' ? styles.active : ''}`}
             >
               Home
+            </a>
+            <a
+              href="/fares"
+              className={`${styles.navLink} ${currentPage === 'fares' ? styles.active : ''}`}
+            >
+              Fares
             </a>
             <a 
               href="/points" 
