@@ -5,16 +5,29 @@
   --quaternary-color: #FFD23D;
   --quinary-color: #383838;
 
-  --font-size-header1: 32px;
-  --font-size-body: 24px;
-  --font-size-small: 20px;
-  --font-size-xsmall: 16px;
+  --foreground: var(--secondary-color); 
+  --background: var(--secondary-color); 
+
+  --base-font-size: 16px;
+  --type-scale-ratio: 1.25; 
+
+  --fs-900: calc(var(--base-font-size) * var(--type-scale-ratio) * var(--type-scale-ratio) * var(--type-scale-ratio) * var(--type-scale-ratio)); /* ×1.5⁴ */
+  --fs-800: calc(var(--base-font-size) * var(--type-scale-ratio) * var(--type-scale-ratio) * var(--type-scale-ratio)); /* ×1.5³ */
+  --fs-700: calc(var(--base-font-size) * var(--type-scale-ratio) * var(--type-scale-ratio)); /* ×1.5² */
+  --fs-600: calc(var(--base-font-size) * var(--type-scale-ratio)); /* ×1.5¹ */
+  --fs-500: var(--base-font-size); /* ×1.5⁰ - Base */
+  --fs-400: calc(var(--base-font-size) / var(--type-scale-ratio)); /* ÷1.5¹ */
+  --fs-300: calc(var(--base-font-size) / var(--type-scale-ratio) / var(--type-scale-ratio)); /* ÷1.5² */
+  --fs-200: calc(var(--base-font-size) / var(--type-scale-ratio) / var(--type-scale-ratio) / var(--type-scale-ratio)); /* ÷1.5³ */
+  --fs-100: calc(var(--base-font-size) / var(--type-scale-ratio) / var(--type-scale-ratio) / var(--type-scale-ratio) / var(--type-scale-ratio)); /* ÷1.5⁴ */
+
+  font-size: var(--base-font-size);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --primary-color: #fff;
-    --secondary-color: #454545;
+    --primary-color: var(--secondary-color);
+    --secondary-color: var(--primary-color);
 ;
   }
 }
@@ -53,4 +66,9 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+
+:is(body, main, .page, .contentContainer) h1 {
+  font-size: var(--fs-900);
 }

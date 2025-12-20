@@ -49,14 +49,8 @@
   max-width: 480px;
 }
 
-.welcome {
-  font-size: clamp(1.8rem, 4vw, 2.4rem);
-  font-weight: 600;
-  line-height: 1.2;
-}
-
 .slogan {
-  font-size: 1.1rem;
+  font-size: var(--fs-700);
   opacity: 0.9;
 }
 
@@ -90,7 +84,7 @@
 
 .tab {
   padding: 14px 0;
-  font-size: 0.95rem;
+  font-size: var(--fs-400);
   font-weight: 700;
   background: var(--secondary-color);
   border: none;
@@ -117,7 +111,7 @@
 }
 
 .label {
-  font-size: 0.75rem;
+  font-size: var(--fs-400);
   font-weight: 600;
   color: var(--quinary-color);
   text-transform: uppercase;
@@ -140,7 +134,7 @@
   border-radius: 999px;
   border: 1px solid var(--quinary-color);
   background: var(--secondary-color);
-  font-size: 0.9rem;
+  font-size: var(--fs-400);
   cursor: pointer;
   transition: all 0.2s ease;
   min-height: 44px;
@@ -166,7 +160,7 @@
   padding: 12px;
   border-radius: 10px;
   border: 1px solid var(--quinary-color);
-  font-size: 1rem;
+  font-size: var(--fs-400);
 }
 
 /* ============================= */
@@ -177,7 +171,7 @@
   display: flex;
   justify-content: space-between;
   margin: 20px 0;
-  font-size: 1rem;
+  font-size: var(--fs-400);
   font-weight: 500;
 }
 
@@ -192,7 +186,7 @@
   border: none;
   border-radius: 999px;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: var(--fs-400);
   cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
@@ -236,15 +230,6 @@
     bottom: 0; 
   }
 
-  .welcome {
-    font-size: 1.5rem;
-    line-height: 1.25;
-  }
-
-  .slogan {
-    font-size: 0.95rem;
-    opacity: 0.85;
-  }
 
   /* CARD BECOMES FLOW CONTENT */
   .tripPlanner {
@@ -272,7 +257,7 @@
     flex: 1 1 auto;
     text-align: center;
     padding: 8px 8px;
-    font-size: 0.95rem;
+    font-size: var(--fs-400);
   }
 
   .optionGroup {
@@ -281,6 +266,6 @@
 
   .planBtn {
     padding: 16px;
-    font-size: 1.05rem;
+    font-size: var(--fs-400);
   }
 }
