@@ -39,7 +39,7 @@ export default function SixBoxes(){
             id: 6,
             label: "Amenities",
             href: "/",
-            icon: "/images/icons/6_amenities_edmonton_to_calgary_skytrain_line_the_chinook_line_alberta.png",
+            icon: "/images/icons/6_amenities_different_culture_foods_edmonton_to_calgary_skytrain_line_the_chinook_line_alberta.png",
         }
     ]
 
