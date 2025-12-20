@@ -1,69 +1,66 @@
-import styles from './header.module.css';
-import Image from 'next/image';
+"use client";
 
-interface HeaderProps {
-  currentPage: 'home' | 'fares' | 'points' | 'map' | 'book' | 'login';
-}
+import styles from "./header.module.css";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+import { useState } from "react";
 
-export default function Header({ currentPage }: HeaderProps) {
+export default function Header() {
+  const pathname = usePathname();
+  const [open, setOpen] = useState(false);
+
+  const isActive = (path: string) => pathname === path;
+
   return (
-    <div className={styles.header}>
-      <div className={styles.headerContent}>
-        {/* Left side - Logo */}
-        <div className={styles.leftSection}>
-          <div className={styles.logo}>
-            Logo
+    <>
+      <header className={styles.header}>
+        <div className={styles.headerContent}>
+          {/* Left side - Logo */}
+          <div className={styles.leftSection}>
+            <div className={styles.logo}>Logo</div>
           </div>
-        </div>
 
-        {/* Right side - Navigation links */}
-        <div className={styles.rightSection}>
-          <nav className={styles.navigation}>
-             <a 
-              href="/" 
-              className={`${styles.navLink} ${currentPage === 'home' ? styles.active : ''}`}
-            >
-              Home
-            </a>
-            <a
-              href="/fares"
-              className={`${styles.navLink} ${currentPage === 'fares' ? styles.active : ''}`}
-            >
-              Fares
-            </a>
-            <a 
-              href="/points" 
-              className={`${styles.navLink} ${currentPage === 'points' ? styles.active : ''}`}
-            >
-              Points
-            </a>
-            <a 
-              href="/map" 
-              className={`${styles.navLink} ${currentPage === 'map' ? styles.active : ''}`}
-            >
-              Map
-            </a>
-            <a 
-              href="/book" 
-              className={`${styles.navLink} ${currentPage === 'book' ? styles.active : ''}`}
-            >
-              Book
-            </a>
-            <a 
-              href="/login" 
-              className={`${styles.navLink} ${currentPage === 'login' ? styles.active : ''}`}
-            >
-              Login
-            </a>
+          {/* Hamburger menu button (mobile only) */}
+          <button
+            className={styles.menuButton}
+            onClick={() => setOpen(!open)}
+            aria-label="Toggle menu"
+          >
+            ☰
+          </button>
+
+          {/* Right side - Navigation links */}
+          <nav className={`${styles.navigation} ${open ? styles.open : ""}`}>
+            {[
+              ["/", "Home"],
+              ["/fares", "Fares"],
+              ["/points", "Points"],
+              ["/map", "Map"],
+              ["/book", "Book"],
+              ["/login", "Login"],
+            ].map(([href, label]) => (
+              <Link
+                key={href}
+                href={href}
+                className={`${styles.navLink} ${
+                  isActive(href) ? styles.active : ""
+                }`}
+                onClick={() => setOpen(false)}
+              >
+                {label}
+              </Link>
+            ))}
           </nav>
         </div>
-      </div>
+      </header>
+
+      {/* Welcome section below header */}
       <div className={styles.bottomLeftText}>
         <div>
           <div className={styles.welcome}>Welcome to The Chinook Line</div>
           <div className={styles.slogan}>Connecting every community.</div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
