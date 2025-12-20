@@ -1,22 +1,54 @@
+
 .page {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  align-items: center;
-  justify-content: center;
   font-family: var(--font-geist-sans);
   background-color: var(--background);
+  width: 100%;
 }
 
 .main {
   display: flex;
-  min-height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  background-color: var(--foreground);
+}
+
+.fullWidthContainer {
+  width: 100vw;
+  position: relative;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 0;
+  margin: 0;
+}
+
+.fullWidthContainer > * {
+  width: 100%;
+}
+
+.contentContainer {
   width: 100%;
   max-width: 800px;
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between;
-  background-color: var(--foreground);
+  margin: 0 auto;
+}
+
+.fullWidthContainer:not(:first-child) {
+  margin-top: 2rem;
+}
+
+.contentContainer:not(:first-child) {
+  margin-top: 2rem;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; 
 }
 
 .intro {
@@ -84,10 +116,9 @@ a.secondary {
 }
 
 .topStack {
-  position: relative; /* 🔑 anchor for absolute header */
+  position: relative;
   width: 100%;
 }
-
 
 @media (hover: hover) and (pointer: fine) {
   a.primary:hover {
@@ -102,8 +133,12 @@ a.secondary {
 }
 
 @media (max-width: 600px) {
-  .main {
+  .contentContainer {
     padding: 48px 24px;
+  }
+  
+  .fullWidthContainer {
+    padding: 0 1rem;
   }
 
   .intro {
