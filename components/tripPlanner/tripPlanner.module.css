@@ -1,16 +1,27 @@
+
 /* ============================= */
 /* HERO CONTAINER */
 /* ============================= */
 
 .planner {
   position: relative;
-  min-height: 90vh;
+  min-height: 70vh;
   width: 100%;
   background-image: url("/hero-bg.jpg");
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
   overflow: hidden;
+}
+
+.plannerContent {
+  position: relative;
+  max-width: 1200px; 
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  min-height: 70vh;
+  padding: 0 2rem; 
 }
 
 /* Overlay for readability */
@@ -33,7 +44,6 @@
 .bottomLeftText {
   position: absolute;
   bottom: 80px;
-  left: 60px;
   color: var(--secondary-color);
   z-index: 2;
   max-width: 480px;
@@ -57,7 +67,7 @@
 .tripPlanner {
   position: absolute;
   top: 160px;
-  right: 6%;
+  right: 0%; 
   width: min(420px, 90%);
   background: var(--secondary-color);
   color: var(--primary-color);
@@ -202,6 +212,11 @@
     padding-bottom: 2rem;
   }
 
+  .plannerContent {
+    padding: 0 1rem;
+    min-height: auto;
+  }
+
   .planner::before {
     background: linear-gradient(
       to bottom,
@@ -211,13 +226,14 @@
   }
 
   /* HERO TEXT STACKS */
- /* HERO TEXT — MOBILE OPTIMIZED */
   .bottomLeftText {
     position: relative;
     margin-top: 40%;
-    padding: 0 1.25rem;
+    padding: 0; 
     max-width: 360px;
     text-align: center;
+    left: 0; 
+    bottom: 0; 
   }
 
   .welcome {
@@ -230,14 +246,13 @@
     opacity: 0.85;
   }
 
-
   /* CARD BECOMES FLOW CONTENT */
   .tripPlanner {
     position: relative;
     top: auto;
     right: auto;
     margin: 0 auto;
-    width: calc(100% - 2rem);
+    width: 100%; 
     padding: 20px;
     border-radius: 16px;
     box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);

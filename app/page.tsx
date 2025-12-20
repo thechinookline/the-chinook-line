@@ -18,12 +18,25 @@ export default function Home() {
     <div className={styles.page}>
       <TripPlanner />
       <TopStations />
+      
       <main className={styles.main}>
-        <GettingStarted />
-        <SixBoxes />
-        <EmailUpdates />
-        <OperationHours />
+        <div className={styles.fullWidthContainer}>
+          <GettingStarted />
+        </div>
+        
+        <div className={styles.contentContainer}>
+          <SixBoxes />
+        </div>
+        
+        <div className={styles.fullWidthContainer}>
+          <EmailUpdates />
+        </div>
+        
+        <div className={styles.contentContainer}>
+          <OperationHours />
+        </div>
       </main>
+      
       <NewsSection />
       <Footer />
       <MessageBanner />
