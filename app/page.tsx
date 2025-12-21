@@ -7,19 +7,40 @@ import Footer from "../components/footer";
 import GettingStarted from "../components/gettingstarted";
 import MessageBanner from "../components/message";
 import EmailUpdates from "../components/emailupdates";
+import NewsSection from "../components/news/newsSection";
+import SixBoxes from "../components/sixboxes";
+import OperationHours from "../components/operationhours";
+import TripPlanner from "../components/tripPlanner";
+import TopStations from "../components/topStations";
 
 export default function Home() {
   return (
     <div className={styles.page}>
-      <Subheader/>
-      <Header currentPage="home"/>
+      <TripPlanner />
+      <TopStations />
+      
       <main className={styles.main}>
-        <GettingStarted/>
-        <EmailUpdates/>
+        <div className={styles.fullWidthContainer}>
+          <GettingStarted />
+        </div>
+        
+        <div className={styles.contentContainer}>
+          <SixBoxes />
+        </div>
+        
+        <div className={styles.fullWidthContainer}>
+          <EmailUpdates />
+        </div>
+        
+        <div className={styles.contentContainer}>
+          <OperationHours />
+        </div>
       </main>
-      <Footer/>
-      <MessageBanner/>
-      <Subfooter/>
+      
+      <NewsSection />
+      <Footer />
+      <MessageBanner />
+      <Subfooter />
     </div>
   );
 }
