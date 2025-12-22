@@ -5,6 +5,9 @@
   --tertiary-color: #011A42;
   --quaternary-color: #FFD23D;
   --quinary-color: #383838;
+  --senary-color: #2C2C2C;
+  --septenary-color: #000000;
+
 
   --foreground: var(--secondary-color); 
   --background: var(--secondary-color); 
