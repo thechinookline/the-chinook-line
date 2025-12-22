@@ -10,7 +10,7 @@ export default function Subheader() {
             comingsoon@thechinookline.ca
           </a>
           <span> | </span> 
-          <a>1.111.111.1111</a>
+          <a className={styles.phone}>1.111.111.1111</a>
         </div>
 
         {/* Language selector */}

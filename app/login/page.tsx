@@ -10,10 +10,10 @@ export default function Login() {
       <main className={styles.main}>
         <Image
           className={styles.logo}
-          src="/next.svg"
+          src="/logo/the_chinook_line_logo_calgary_to_edmonton_transit_line_with_white_background.png"
           alt="Next.js logo"
-          width={100}
-          height={20}
+          width={50}
+          height={50}
           priority
         />
         <div className={styles.intro}>

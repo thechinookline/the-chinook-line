@@ -4,6 +4,7 @@ import styles from "./header.module.css";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Header() {
   const pathname = usePathname();
@@ -15,7 +16,14 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.headerContent}>
         <div className={styles.leftSection}>
-          <div className={styles.logo}>Logo</div>
+          <Image
+                    className={styles.logo}
+                    src="/logo/the_chinook_line_logo_calgary_to_edmonton_transit_line_mountains_wind_white_text.png"
+                    alt="Next.js logo"
+                    width={210}
+                    height={70}
+                    priority
+                  />
         </div>
 
         {/* Hamburger (mobile only) */}

@@ -1,3 +1,4 @@
+
 :root {
   --primary-color: #454545;
   --secondary-color: #ffffff;
@@ -18,8 +19,6 @@
   --fs-500: var(--base-font-size); /* ×1.5⁰ - Base */
   --fs-400: calc(var(--base-font-size) / var(--type-scale-ratio)); /* ÷1.5¹ */
   --fs-300: calc(var(--base-font-size) / var(--type-scale-ratio) / var(--type-scale-ratio)); /* ÷1.5² */
-  --fs-200: calc(var(--base-font-size) / var(--type-scale-ratio) / var(--type-scale-ratio) / var(--type-scale-ratio)); /* ÷1.5³ */
-  --fs-100: calc(var(--base-font-size) / var(--type-scale-ratio) / var(--type-scale-ratio) / var(--type-scale-ratio) / var(--type-scale-ratio)); /* ÷1.5⁴ */
 
   font-size: var(--base-font-size);
 }

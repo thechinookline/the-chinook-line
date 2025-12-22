@@ -1,7 +1,7 @@
 .subheader {
-  background: #f5f5f5;
+  background: var(--primary-color);
   padding: 1rem 2rem;
-  border-bottom: 1px solid #eaeaea;
+  border-bottom: 1px solid var(--primary-color);
   width: 100%;
 }
 
@@ -18,10 +18,17 @@
 }
 
 .email {
-  color: #333;
+  color: var(--secondary-color);
   text-decoration: none;
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: var(--fs-400);
+}
+
+.phone {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: var(--fs-400);
 }
 
 .email:hover {
