@@ -1,0 +1,23 @@
+.profileSection{
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    width: 100%
+
+}
+
+.welcomeMessage{
+    font-size: var(--font-size-header1);
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.points{
+    font-size: var(--font-size-header1);
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.textSection{
+    gap: 50px;
+}

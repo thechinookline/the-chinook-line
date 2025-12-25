@@ -36,11 +36,10 @@ export default function Home() {
           <OperationHours />
         </div>
       </main>
-      
-      <NewsSection />
-      <Footer />
-      <MessageBanner />
-      <Subfooter />
+      <Footer/>
+      <MessageBanner/>
+      <Subfooter/>
+
     </div>
   );
 }
