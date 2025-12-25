@@ -11,7 +11,7 @@ export default function Profile(){
 
     <div className={styles.page}>
       <Subheader />
-      <Header currentPage="home" />
+      <Header/>
        <main>
         <ProfileInfo />
        </main>

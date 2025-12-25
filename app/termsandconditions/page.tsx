@@ -1,6 +1,4 @@
 import Footer from "../../components/footer";
-import Subheader from '../../components/subheader';
-import Header from "../../components/header";
 import Subfooter from "../../components/subfooter";
 import styles from "./termsandconditions.module.css";
 import MessageBanner from "../../components/message";
