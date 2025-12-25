@@ -1,4 +1,6 @@
 import Footer from "../../components/footer";
+import Subheader from '../../components/subheader';
+import Header from "../../components/header";
 import Subfooter from "../../components/subfooter";
 import styles from "./termsandconditions.module.css";
 import MessageBanner from "../../components/message";
@@ -7,7 +9,7 @@ export default function TermsAndConditions() {
   return (
     <div className={styles.page}>
       <Subheader />
-      <Header currentPage="home" />
+      <Header/>
       
       <main className={styles.main}>
         <h1 className={styles.title}>Terms and conditions</h1>
