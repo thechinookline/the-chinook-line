@@ -2,11 +2,14 @@
   background-color: var(--tertiary-color); 
   color: var(--secondary-color); 
   padding: 4rem 3rem;
+  width: 100%;
+  max-width: none !important; 
 }
 
 .contentWrapper {
-  max-width: 80rem;
+  max-width: none; 
   margin: 0 auto;
+  width: 100%;
 }
 
 .rowContainer {
@@ -15,6 +18,9 @@
   align-items: center;
   justify-content: space-between;
   gap: 2.5rem;
+  max-width: 1200px; 
+  margin: 0 auto;
+  width: 100%;
 }
 
 .textContent {

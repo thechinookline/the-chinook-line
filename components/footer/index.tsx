@@ -42,17 +42,65 @@ export default function Footer() {
             <p className={styles.contactText}>test@test.com</p>
             
             <div className={styles.socialIcons}>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                <span className={styles.socialIcon}>📘</span>
+              <a 
+                href="https://www.facebook.com/profile.php?id=61584851337306" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <img 
+                  src="/images/icons/facebook_the_chinook_line_calgary_to_edmonton.png"
+                  alt="Facebook"
+                  width={30} 
+                  height={30}
+                />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                <span className={styles.socialIcon}>🐦</span>
+              <a 
+                href="https://www.instagram.com/chinookline/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <img 
+                  src="/images/icons/instagram_the_chinook_line_calgary_to_edmonton.png"
+                  alt="Instagram"
+                  width={30} 
+                  height={30}
+                />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                <span className={styles.socialIcon}>📷</span>
+              <a 
+                href="https://www.linkedin.com/company/the-chinook-line/?viewAsMember=true" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <img 
+                  src="/images/icons/linkedin_the_chinook_line_calgary_to_edmonton.png"
+                  alt="LinkedIn"
+                  width={30} 
+                  height={30}
+                />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                <span className={styles.socialIcon}>💼</span>
+              <a 
+                href="https://x.com/thechinookline" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <img 
+                  src="/images/icons/twitter_the_chinook_line_calgary_to_edmonton.png"
+                  alt="X"
+                  width={30} 
+                  height={30}
+                />
+              </a>
+              <a 
+                href="https://www.youtube.com/@TheChinookLine" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <img 
+                  src="/images/icons/youtube_the_chinook_line_calgary_to_edmonton.png"
+                  alt="YouTube"
+                  width={30} 
+                  height={30}
+                />
               </a>
             </div>
           </div>

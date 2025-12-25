@@ -1,23 +1,19 @@
 import Image from "next/image";
 import styles from "./login.module.css";
-import Subheader from "../../components/subheader";
-import Header from "../../components/header";
 import Subfooter from "../../components/subfooter";
 import Footer from "../../components/footer";
 import MessageBanner from "../../components/message";
 
 export default function Login() {
-    return (
-         <div className={styles.page}>
-      <Subheader/>
-      <Header currentPage="login"/>
+  return (
+    <div className={styles.page}>
       <main className={styles.main}>
         <Image
           className={styles.logo}
-          src="/next.svg"
+          src="/logo/the_chinook_line_logo_calgary_to_edmonton_transit_line_with_white_background.png"
           alt="Next.js logo"
-          width={100}
-          height={20}
+          width={50}
+          height={50}
           priority
         />
         <div className={styles.intro}>
@@ -68,9 +64,9 @@ export default function Login() {
           </a>
         </div>
       </main>
-      <Footer/>
-      <MessageBanner/>
-      <Subfooter/>
+      <Footer />
+      <MessageBanner />
+      <Subfooter />
     </div>
-    );
+  );
 }
