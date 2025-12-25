@@ -1,16 +1,13 @@
 import Image from "next/image";
 import styles from "./points.module.css";
-import Subheader from "../../components/subheader";
-import Header from "../../components/header";
 import Subfooter from "../../components/subfooter";
 import Footer from "../../components/footer";
 import MessageBanner from "../../components/message";
+import OperationHours from "../../components/operationhours";
 
 export default function Points() {
-    return (
-         <div className={styles.page}>
-      <Subheader/>
-      <Header currentPage="points"/>
+  return (
+    <div className={styles.page}>
       <main className={styles.main}>
         <div className={styles.intro}>
           <h1>Points</h1>
@@ -59,10 +56,11 @@ export default function Points() {
             Documentation
           </a>
         </div>
+        <OperationHours/>
       </main>
-      <Footer/>
-      <MessageBanner/>
-      <Subfooter/>
+      <Footer />
+      <MessageBanner />
+      <Subfooter />
     </div>
-    );
+  );
 }

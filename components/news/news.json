@@ -1,0 +1,25 @@
+{
+  "news": [
+    {
+      "id": "1",
+      "title": "Calgary Green Line Expansion Approved",
+      "date": "March 12, 2025",
+      "excerpt": "Alberta Transit has approved the next phase of the Green Line expansion, improving access to key communities across Calgary.",
+      "image": "/images/news/greenLine.png"
+    },
+    {
+      "id": "2",
+     "title": "Public Transit Safety Measures",
+      "date": "March 5, 2025",
+      "excerpt": "New safety protocols have been implemented to enhance passenger security and comfort.",
+      "image": "/images/news/safety.png"
+    },
+    {
+      "id": "3",
+      "title": "Edmonton LRT Service Changes",
+      "date": "February 28, 2025",
+      "excerpt": "Temporary schedule adjustments will affect several LRT routes as maintenance work continues through spring.",
+      "image": "/images/news/edmonton.png"
+    }
+  ]
+}
