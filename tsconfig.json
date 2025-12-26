@@ -24,7 +24,10 @@
     ],
     "paths": {
       "@/*": [
-        "./src/*"
+        "./*"  // Changed from "./src/*" to "./*" (root level)
+      ],
+      "@services/*": [
+        "./app/services/*"  // Optional: for your Firebase services
       ]
     }
   },

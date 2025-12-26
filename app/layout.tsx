@@ -28,10 +28,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <div className="topStack">
-          <Subheader />
-          <Header />
-        </div>
+        <Subheader />
+        <Header />
         {children}
       </body>
     </html>
