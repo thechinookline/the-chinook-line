@@ -14,7 +14,14 @@
 }
 
 .menuButton {
-  display: none; /* 👈 hidden on desktop */
+  display: none;
+  background: none;
+  border: none;
+  color: var(--secondary-color);
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  line-height: 1;
 }
 
 .headerContent {
@@ -35,11 +42,6 @@
   align-items: center;
 }
 
-.rightSection {
-  display: flex;
-  align-items: center;
-}
-
 .navigation {
   display: flex;
   gap: 2rem;
@@ -47,7 +49,7 @@
 }
 
 .navLink {
-  color:  var(--secondary-color);
+  color: var(--secondary-color);
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
@@ -56,9 +58,6 @@
   transition: color 0.3s ease;
 }
 
-/* REMOVED HOVER EFFECTS - No color change on hover */
-
-/* Active page styling only */
 .navLink.active {
   color: var(--quaternary-color);
   font-weight: 700;
@@ -74,8 +73,7 @@
   background: var(--quaternary-color);
 }
 
-/* Make login stand out */
-.navigation .navLink:last-child {
+.navigation a.navLink[href="/login"] {
   background: var(--quaternary-color);
   color: var(--primary-color);
   padding: 0.5rem 1.5rem;
@@ -83,22 +81,39 @@
   margin-left: 1rem;
 }
 
-.navigation .navLink:last-child:hover {
-  background: var(--quaternary-color);
-}
-
-.navigation .navLink:last-child.active {
-  background: var(--quaternary-color);
-}
-
-.navigation .navLink:last-child::after {
+.navigation a.navLink[href="/login"].active::after {
   display: none;
 }
 
-/* Mobile responsiveness */
+.signOutButton {
+  background: var(--quaternary-color);
+  color: var(--primary-color);
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+  margin-left: 1rem;
+  border: none;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.signOutButton:hover {
+  opacity: 0.9;
+}
+
+.authLoading {
+  color: var(--secondary-color);
+  padding: 0.5rem 1.5rem;
+  margin-left: 1rem;
+  font-size: 1rem;
+}
+
 @media (max-width: 768px) {
   .header {
     padding: 0.75rem 1rem;
+    background-color: transparent;
   }
 
   .headerContent {
@@ -108,23 +123,18 @@
 
   .menuButton {
     display: block;
-    font-size: 1.6rem;
-    background: none;
-    border: none;
-    cursor: pointer;
   }
-  /* Hide nav by default */
+
   .navigation {
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    background: var(--secondary-color);
     display: none;
     flex-direction: column;
     gap: 0;
     padding: 0.5rem 0;
-    border-radius: 0 0 12px 12px;
+    background-color: transparent;
   }
 
   .navigation.open {
@@ -135,10 +145,29 @@
     padding: 0.9rem 1.25rem;
     width: 100%;
     font-size: 1rem;
+    text-align: left;
   }
 
-  .navigation .navLink:last-child {
+  .navigation a.navLink[href="/login"],
+  .signOutButton {
     margin: 0.75rem 1.25rem 0;
     text-align: center;
+    display: block;
+    width: calc(100% - 2.5rem);
+  }
+
+  .authLoading {
+    margin: 0.75rem 1.25rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 0.5rem;
+  }
+
+  .logo {
+    max-width: 160px;
   }
 }

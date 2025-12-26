@@ -48,11 +48,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-topStack {
-  position: relative; /* 🔑 anchor for absolute header */
+.topStack {
+  position: relative;
   width: 100%;
+  background-color: transparent !important;
+  z-index: 1;
 }
-
 * {
   box-sizing: border-box;
   padding: 0;

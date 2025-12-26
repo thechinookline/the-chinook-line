@@ -118,6 +118,7 @@ a.secondary {
 .topStack {
   position: relative;
   width: 100%;
+  background-color: transparent;
 }
 
 @media (hover: hover) and (pointer: fine) {
