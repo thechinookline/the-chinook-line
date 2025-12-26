@@ -1,0 +1,75 @@
+/* HeroSection.module.css */
+.hero {
+  position: relative;
+  width: 100vw;
+  min-height: 70vh;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  
+  /* Force full viewport width */
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.gradientOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  padding: 0 2rem;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: inherit;
+}
+
+/* Position variants */
+.heroContent.left {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.heroContent.center {
+  align-items: center;
+  text-align: center;
+}
+
+.heroContent.right {
+  align-items: flex-end;
+  text-align: right;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    /* Reset negative margins on mobile */
+    left: 0;
+    right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+  
+  .heroContent {
+    padding: 0 1rem;
+  }
+  
+  .heroContent.left,
+  .heroContent.center,
+  .heroContent.right {
+    align-items: center;
+    text-align: center;
+  }
+}
