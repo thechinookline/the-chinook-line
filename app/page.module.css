@@ -1,5 +1,6 @@
-
-.page {
+/* page.module.css */
+/* Replace .page with .contentWrapper */
+.contentWrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -18,10 +19,10 @@
 .fullWidthContainer {
   width: 100vw;
   position: relative;
+  left: 50%;
+  right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  padding: 0;
-  margin: 0;
 }
 
 .fullWidthContainer > * {
@@ -35,6 +36,7 @@
   flex-direction: column;
   align-items: flex-start;
   margin: 0 auto;
+  padding: 0 1rem; /* Add some padding for mobile */
 }
 
 .fullWidthContainer:not(:first-child) {
@@ -139,7 +141,11 @@ a.secondary {
   }
   
   .fullWidthContainer {
-    padding: 0 1rem;
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .intro {

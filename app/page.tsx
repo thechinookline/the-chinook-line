@@ -10,13 +10,18 @@ import SixBoxes from "../components/sixboxes";
 import OperationHours from "../components/operationhours";
 import TripPlanner from "../components/tripPlanner";
 import TopStations from "../components/topStations";
+import HeroSection from "@/components/herosection";
 
 export default function Home() {
   return (
     <>
-      
-      <div className={styles.page}>
+      {/* HeroSection - full width */}
+      <HeroSection>
         <TripPlanner />
+      </HeroSection>
+      
+      {/* Separate container for the rest */}
+      <div className={styles.contentWrapper}>
         <TopStations />
         
         <main className={styles.main}>
