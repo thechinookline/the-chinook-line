@@ -1,35 +1,49 @@
-// app/login/page.tsx - Updated with Google button
+// app/login/page.tsx - Updated with Firebase lazy loading
 'use client';
 
 import styles from "./login.module.css";
 import Subfooter from "../../components/subfooter";
 import Footer from "../../components/footer";
 import MessageBanner from "../../components/message";
-import { signIn, signInWithGoogle } from '@services/firebase'; // ← Added signInWithGoogle
-import { auth } from '@services/firebase/auth';
 import { FormEvent, useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { onAuthStateChanged } from "firebase/auth";
-import Image from "next/image"; // For Google logo
+// REMOVE all Firebase imports from here:
+// import { signIn, signInWithGoogle } from '@services/firebase';
+// import { auth } from '@services/firebase/auth';
+// import { onAuthStateChanged } from "firebase/auth";
 
 export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
-  const [googleLoading, setGoogleLoading] = useState(false); // Separate loading for Google
+  const [googleLoading, setGoogleLoading] = useState(false);
   const router = useRouter();
 
+  // Check if user is already logged in - WITH LAZY LOADING
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        router.push('/profile');
-      }
-    });
+    const checkAuth = async () => {
+      const { onAuthStateChanged } = await import("firebase/auth");
+      const { auth } = await import("@services/firebase/auth");
+      
+      const unsubscribe = onAuthStateChanged(auth, (user) => {
+        if (user) {
+          router.push('/profile');
+        }
+      });
 
-    return () => unsubscribe();
-  }, []);
+      return unsubscribe;
+    };
+
+    const unsubscribePromise = checkAuth();
+    
+    return () => {
+      unsubscribePromise.then(unsubscribe => {
+        if (unsubscribe) unsubscribe();
+      });
+    };
+  }, [router]);
 
   const handleLogin = async (e: FormEvent) => {
     e.preventDefault();
@@ -37,6 +51,8 @@ export default function Login() {
     setLoading(true);
 
     try {
+      // Dynamically import signIn when needed
+      const { signIn } = await import('@services/firebase');
       const userCredential = await signIn(email, password);
       console.log('Logged in user:', userCredential.user.email);
       router.push('/profile');
@@ -71,12 +87,14 @@ export default function Login() {
     }
   };
 
-  // NEW: Google Sign-In Handler
+  // Google Sign-In Handler - WITH LAZY LOADING
   const handleGoogleSignIn = async () => {
     setError('');
     setGoogleLoading(true);
     
     try {
+      // Dynamically import signInWithGoogle when needed
+      const { signInWithGoogle } = await import('@services/firebase');
       const result = await signInWithGoogle();
       console.log('Google user:', result.user);
       router.push('/profile');
@@ -105,6 +123,7 @@ export default function Login() {
     }
 
     try {
+      // Dynamically import resetPassword
       const { resetPassword } = await import('@services/firebase/auth');
       await resetPassword(email);
       alert(`Password reset email sent to ${email}`);
