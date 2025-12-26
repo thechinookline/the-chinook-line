@@ -1,3 +1,4 @@
+// components/Header.tsx
 "use client";
 
 import styles from "./header.module.css";
@@ -5,34 +6,50 @@ import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { onAuthStateChanged, User } from "firebase/auth";
-import { auth, logout } from "@services/firebase/auth"; // Adjust path as needed
+// REMOVE these Firebase imports from the top level
 
 export default function Header() {
   const pathname = usePathname();
   const router = useRouter();
   const [open, setOpen] = useState(false);
-  const [user, setUser] = useState<User | null>(null);
+  const [user, setUser] = useState<import("firebase/auth").User | null>(null); // Add type here
   const [loading, setLoading] = useState(true);
 
-  // Track authentication state
+  // Track authentication state - NOW WITH LAZY LOADING
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-      setLoading(false);
-    });
+    // Dynamically import Firebase ONLY in the browser
+    const initializeAuth = async () => {
+      const { onAuthStateChanged } = await import("firebase/auth");
+      const { auth } = await import("@services/firebase/auth");
+      
+      const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+        setUser(currentUser);
+        setLoading(false);
+      });
 
-    // Cleanup subscription on unmount
-    return () => unsubscribe();
+      return unsubscribe;
+    };
+
+    const unsubscribePromise = initializeAuth();
+    
+    return () => {
+      unsubscribePromise.then(unsubscribe => {
+        if (unsubscribe) unsubscribe();
+      });
+    };
   }, []);
 
   const isActive = (path: string) => pathname === path;
 
   const handleSignOut = async () => {
     try {
+      // Dynamically import logout when needed
+      const { logout } = await import("@services/firebase/auth");
+      const { auth } = await import("@services/firebase/auth");
+      
       await logout();
       setOpen(false);
-      router.push("/"); // Redirect to home after sign out
+      router.push("/");
     } catch (error) {
       console.error("Error signing out:", error);
     }
