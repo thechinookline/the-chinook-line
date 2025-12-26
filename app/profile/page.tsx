@@ -3,31 +3,45 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { onAuthStateChanged, User } from 'firebase/auth';
-import { auth } from '@services/firebase/auth';
 import ProfileInfo from "../../components/profileinfo";
 import Footer from "../../components/footer";
 import Subfooter from "../../components/subfooter";
 import styles from "./profile.module.css";
 import MessageBanner from "../../components/message";
+// Add type-only import for User
+import type { User } from 'firebase/auth';
 
 export default function Profile() {
   const router = useRouter();
-  const [user, setUser] = useState<User | null>(null);
+  const [user, setUser] = useState<User | null>(null); // Add type here
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-      setLoading(false);
-      
-      // Redirect to login if not authenticated
-      if (!currentUser) {
-        router.push('/login');
-      }
-    });
+    // Dynamically import Firebase ONLY inside useEffect (runs in browser)
+    const checkAuth = async () => {
+      const { onAuthStateChanged } = await import("firebase/auth");
+      const { auth } = await import("@services/firebase/auth");
 
-    return () => unsubscribe();
+      const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+        setUser(currentUser);
+        setLoading(false);
+        
+        // Redirect to login if not authenticated
+        if (!currentUser) {
+          router.push('/login');
+        }
+      });
+
+      return unsubscribe;
+    };
+
+    const unsubscribePromise = checkAuth();
+    
+    return () => {
+      unsubscribePromise.then(unsubscribe => {
+        if (unsubscribe) unsubscribe();
+      });
+    };
   }, [router]);
 
   // Show loading state while checking auth
