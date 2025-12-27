@@ -11,6 +11,7 @@ import OperationHours from "../components/operationhours";
 import TripPlanner from "../components/tripPlanner";
 import TopStations from "../components/topStations";
 import HeroSection from "@/components/herosection";
+import NewsSection from "@/components/news/newsSection";
 
 export default function Home() {
   return (
@@ -38,6 +39,7 @@ export default function Home() {
           </div>
           
           <div className={styles.contentContainer}>
+            <NewsSection/>
             <OperationHours />
           </div>
         </main>

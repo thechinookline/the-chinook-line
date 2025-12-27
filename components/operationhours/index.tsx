@@ -12,25 +12,29 @@ export default function OperationHours({
   email = 'info@test.com',
 }: OperationHoursProps) {
   return (
-    <div className={styles.container}>
-      <div className={styles.column}>
-        <h3 className={styles.title}>Phone</h3>
-        <a href={`tel:${phone}`} className={styles.content}>
-          {phone}
-        </a>
+    <section className={styles.section}>
+      <div className={styles.container}>
+        <div className={styles.contentGrid}>
+          <div className={styles.column}>
+            <h3 className={styles.title}>Phone</h3>
+            <a href={`tel:${phone}`} className={styles.content}>
+              {phone}
+            </a>
+          </div>
+          <div className={styles.column}>
+            <h3 className={styles.title}>Operating Hours</h3>
+            <p className={styles.content}>
+              {operatingHours}
+            </p>
+          </div>
+          <div className={styles.column}>
+            <h3 className={styles.title}>Email</h3>
+            <a href={`mailto:${email}`} className={styles.content}>
+              {email}
+            </a>
+          </div>
+        </div>
       </div>
-      <div className={styles.column}>
-        <h3 className={styles.title}>Operating Hours</h3>
-        <p className={styles.content}>
-          {operatingHours}
-        </p>
-      </div>
-      <div className={styles.column}>
-        <h3 className={styles.title}>Email</h3>
-        <a href={`mailto:${email}`} className={styles.content}>
-          {email}
-        </a>
-      </div>
-    </div>
+    </section>
   );
 }

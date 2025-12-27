@@ -1,6 +1,13 @@
-.section{
-    padding: 56px 16px;
-    width: 100%;
+.section {
+  background: var(--secondary-color);
+  padding: 3rem 0;
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
 .grid{
