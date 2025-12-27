@@ -1,5 +1,17 @@
-/* components/OperationHours.module.css */
+.section {
+  background: var(--secondary-color);
+  padding: 3rem 0;
+  width: 100%;
+}
+
 .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Rename your existing container to avoid conflict */
+.contentGrid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
@@ -8,7 +20,7 @@
 }
 
 @media (min-width: 768px) {
-  .container {
+  .contentGrid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -20,8 +32,6 @@
   text-align: center;
   padding: 0 1rem;
 }
-
-/* Removed the desktop media query that changed alignment to left */
 
 .title {
   font-size: var(--font-size-body);

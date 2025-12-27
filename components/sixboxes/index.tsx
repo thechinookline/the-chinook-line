@@ -45,25 +45,27 @@ export default function SixBoxes(){
 
     return(
         <section className={styles.section}>
-            <div className={styles.grid}>
-              {cards.map((card) => (
-                <Link 
-                  key={card.id}
-                  href={card.href}
-                  className={styles.card}>
-                   <div>
-                    <Image 
-                      src={card.icon}
-                      alt={card.label}
-                      width={60}
-                      height={60}
-                    />
-                   </div>
-                   <div>
-                    {card.label}
-                   </div>
-                </Link>
-              ))}
+            <div className={styles.container}>
+                <div className={styles.grid}>
+                {cards.map((card) => (
+                    <Link 
+                    key={card.id}
+                    href={card.href}
+                    className={styles.card}>
+                    <div>
+                        <Image 
+                        src={card.icon}
+                        alt={card.label}
+                        width={60}
+                        height={60}
+                        />
+                    </div>
+                    <div>
+                        {card.label}
+                    </div>
+                    </Link>
+                ))}
+                </div>
             </div>
         </section>
     )
