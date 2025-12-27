@@ -3,7 +3,7 @@
   color: var(--secondary-color);
   padding: 1.5rem 2rem;
   width: 100%;
-  border-top: 1px solid rgba(255, 255, 255, 0.1); 
+  border-top: 1px solid var(--septenary-color); 
 }
 
 .subfooterContent {
@@ -18,8 +18,8 @@
 }
 
 .copyright {
-  color: rgba(255, 255, 255, 0.7); 
-  font-size: var(--font-size-xsmall); 
+  color: var(--octonary-color); 
+  font-size: var(--fs-400); 
 }
 
 .links {
@@ -28,10 +28,11 @@
   gap: 0.5rem;
   flex-wrap: wrap;
   justify-content: center;
+  font-size: var(--fs-400);
 }
 
 .link {
-  color: rgba(255, 255, 255, 0.7); 
+  color: var(--octonary-color); 
   text-decoration: none;
   font-size: var(--font-size-xsmall); 
   transition: color 0.3s ease;
@@ -42,7 +43,7 @@
 }
 
 .separator {
-  color: rgba(255, 255, 255, 0.5); 
+  color: var(--octonary-color); 
   font-size: var(--font-size-xsmall); 
 }
 
@@ -65,7 +66,7 @@
   
   .copyright,
   .link {
-    color: rgba(255, 255, 255, 0.7); 
+    color: var(--octonary-color); 
   }
   
   .link:hover {

@@ -7,7 +7,7 @@ export default function Subfooter() {
       <div className={styles.subfooterContent}>
         {/* First line - Copyright */}
         <div className={styles.copyright}>
-          © 2026 Alberta Planning. All rights reserved.
+          © 2026 The Chinook Line. All rights reserved.
         </div>
         
         {/* Second line - Links */}

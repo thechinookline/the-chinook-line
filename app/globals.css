@@ -7,6 +7,7 @@
   --quinary-color: #383838;
   --senary-color: #2C2C2C;
   --septenary-color: #000000;
+  --octonary-color: rgba(255, 255, 255, 0.7);
 
 
   --foreground: var(--secondary-color); 
@@ -21,8 +22,6 @@
   --fs-600: calc(var(--base-font-size) * var(--type-scale-ratio)); /* ×1.5¹ */
   --fs-500: var(--base-font-size); /* ×1.5⁰ - Base */
   --fs-400: calc(var(--base-font-size) / var(--type-scale-ratio)); /* ÷1.5¹ */
-  --fs-300: calc(var(--base-font-size) / var(--type-scale-ratio) / var(--type-scale-ratio)); /* ÷1.5² */
-
   font-size: var(--base-font-size);
 }
 
