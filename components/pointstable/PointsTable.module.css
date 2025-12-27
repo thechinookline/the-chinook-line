@@ -1,0 +1,85 @@
+.section {
+  background: var(--secondary-color);
+  padding: 1rem 0;
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.tableContainer {
+  width: 100%;
+  overflow-x: auto;
+  margin: 2rem 0;
+}
+
+.pointsTable {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.headerCell {
+  background-color: var(--quaternary-color);
+  color: var(--primary-color);
+  font-weight: 600;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  border: none;
+  font-size: var(--font-size-body);
+}
+
+.evenRow {
+  background-color: var(--secondary-color); 
+}
+
+.oddRow {
+  background-color: color-mix(in srgb, var(--quaternary-color) 50%, transparent);
+}
+
+.benefitCell,
+.pointsCell,
+.redeemCell {
+  padding: 1rem 1.5rem;
+  text-align: center;
+  border: none;
+  font-size: var(--font-size-body);
+}
+
+.benefitCell {
+  text-align: left;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.pointsCell {
+  color: var(--primary-color);
+}
+
+.redeemCell {
+  color: var(--tertiary-color);
+  font-weight: 600;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .headerCell,
+  .benefitCell,
+  .pointsCell,
+  .redeemCell {
+    padding: 0.75rem 1rem;
+    font-size: var(--font-size-xsmall);
+  }
+}
+
+@media (max-width: 480px) {
+  .headerCell,
+  .benefitCell,
+  .pointsCell,
+  .redeemCell {
+    padding: 0.5rem 0.75rem;
+  }
+}
