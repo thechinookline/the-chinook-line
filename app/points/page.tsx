@@ -6,6 +6,7 @@ import Footer from "../../components/footer";
 import MessageBanner from "../../components/message";
 import OperationHours from "../../components/operationhours";
 import HeroSection from "@/components/herosection";
+import PointsTable from "@/components/pointstable";
 
 export default function Points() {
   return (
@@ -28,31 +29,14 @@ export default function Points() {
       {/* .page container starts here */}
       <div className={styles.page}>
         <main className={styles.main}>
-          <div className={styles.ctas}>
-            <a
-              className={styles.primary}
-              href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                className={styles.logo}
-                src="/vercel.svg"
-                alt="Vercel logomark"
-                width={16}
-                height={16}
-              />
-              Deploy Now
-            </a>
-            <a
-              className={styles.secondary}
-              href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Documentation
-            </a>
-          </div>
+          <h2 className={styles.paragraph}>Get Started Earning Points</h2>
+          <p className={styles.paragraph}>Earn points while you buy tickets and shop at our stores at each stop. Then use those points to redeem it for free day, week, or month passes.</p>
+          <section className={styles.section}>
+            <div className={styles.container}>
+              <PointsTable />
+            </div>
+            <p className={styles.paragraph}>If you want to see what current promotions are available please download the app.</p>
+          </section>
           <OperationHours/>
         </main>
         <Footer />
